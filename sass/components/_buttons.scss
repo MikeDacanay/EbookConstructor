@@ -1,0 +1,116 @@
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+input {
+  line-height: normal;
+
+  &[type="checkbox"],
+  &[type="radio"]{
+	  box-sizing: border-box;
+  	padding: 0;
+  }
+  &[type="number"]::-webkit-inner-spin-button,
+  &[type="number"]::-webkit-outer-spin-button{
+  	height: auto;
+  }
+}
+
+.bttn{
+    display: inline-flex;
+    background-color: #fff;
+    font-weight: 400;
+    color: #003b4d;
+    cursor: pointer;
+    font-size: 0.80rem;
+    border: .0.50rem solid  #00758f;
+    height: 1.80rem;
+    width: max-content;
+    width:-moz-max-content;
+    position: relative;
+    line-height: 1.80rem;
+    margin-left: 0.70rem;
+    -webkit-transition: background-color  500ms;
+    -moz-transition: background-color 500ms;
+    -ms-transition: background-color 500ms;
+    -o-transition: background-color 500ms;
+    transition:background-color 500ms;
+}
+a.bttn{
+    text-decoration: none;
+}
+.bttn.go-bttn{
+    float: right;
+    font-size: 1.00rem;
+    height: 2.30rem;
+
+}
+.bttn-txt{
+    padding-left: 1.00rem;
+/*    padding-right: 15px;*/
+    line-height: 1.80rem;
+    display: inline-block;
+}
+
+.company-logo .bttn-txt{
+    padding-right: 0px;
+}
+
+.bttn-arrrow{
+    display: inline-block;
+    background-image: url("../assets/images/arrow-btn-blue.svg");
+    background-repeat: no-repeat;
+    background-size: 1.00rem;
+    height: 1.80rem;
+    background-position: center center;
+    width: 2.50rem;
+    -webkit-transition: background-position  500ms;
+    -moz-transition: background-position 500ms;
+    -ms-transition: background-position 500ms;
+    -o-transition: background-position 500ms;
+    transition:background-position 500ms;
+}
+.bttn:hover{
+    color:#00758f ;
+    background-color: #ffffff;
+
+}
+.bttn:hover .bttn-arrrow{
+    display: inline-block;
+    background-image: url("../assets/graphics/icons/arrow_blue_lt.svg");
+    background-position: 85% center;
+}
