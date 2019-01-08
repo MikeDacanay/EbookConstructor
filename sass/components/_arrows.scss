@@ -72,3 +72,13 @@
 [dir='rtl'] .slick-next {
   right: auto;
 }
+
+.arrow{
+  &--1{
+    height: 0.90rem;
+    width: 1.05rem;
+    background-image: url('../assets/graphics/icons/arrow_blue_lt.svg');
+    background-size: cover;
+    transition: transform 500ms;
+  }
+}

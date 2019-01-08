@@ -20,7 +20,12 @@
 	    margin-left: 3.45rem;
 	    display: inline-block;
 	}
-
+  &-phone{
+    display: none;
+    @include bp(1024){
+      display: block;   
+    }
+  }
 }
 
 

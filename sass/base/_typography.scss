@@ -25,7 +25,7 @@ html {
 body {
   /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.5em;
-  font-family: $font-reg;
+  font-family: $font-arial;
   color: #4e5052;
 }
 
@@ -38,7 +38,7 @@ p {
 a {
   background-color: transparent;
   cursor: pointer;
-  color: #1f4f82;
+  color: #00758f;
   text-decoration: none;    
   &:active{
     outline: 0;  
@@ -51,8 +51,7 @@ a {
 
 b,
 strong {
-  font-family: $font-bold;
-    font-weight: 400;
+  font-weight: 700;
 }
 
 h1 {
@@ -66,7 +65,7 @@ h2{
     line-height: 1.2em;
     color:#00758f;
     font-weight: normal;
-    font-family: $font-bold;
+    font-family: $font-reg;
 }
 
 h3{
@@ -77,7 +76,7 @@ h3{
 }
 h4{    
     color: #00758f;
-    font-family: $font-bold;
+    font-family: $font-reg;
     font-weight: 400;
 }
 h6{
@@ -113,34 +112,65 @@ textarea {
   
   &--main{
     font-family: $font-bold;
-    font-size: $big-font-size-5;
+    font-size: $big-font-size-1;
     display: block;
   }
   &--sub{
     font-family: $font-reg;
     display: block;
-    font-size: $big-font-size-2;    
+    font-size: $big-font-size-1;    
   }  
 }
 
 .header{
   color: $color-blue-1;
-  width: 91%;;
+  font-family: $font-arial;
+  font-weight: 700;
+  font-size: $big-font-size-1;
 
-  &__main{
-    font-family: $font-bold;
-    font-size: 2.10rem;
-    display: block;
-  }
-  &__sub{
-    display: block;
-  }
+  &--1{
+
+  }  
 }
 
 .pg{
-  font-size: $default-font-size;
+  font-size: $reg-font-size-1;
   line-height: 1.5em;
-  &:not(:last-child){
-    margin-bottom: 1.20rem;
+  margin-top: 1.05rem;
+}
+
+.vid_text{
+  color: #00758f;
+  font-size: $reg-font-size-1;
+  font-family: Arial, Helvetica, sans-serif;
+  &--1{
+    margin-top: 0.25rem;
+    margin-bottom: .5rem;  
+    letter-spacing: -.01em;
+  }
+}
+.btn-txt{
+  margin-right: auto;
+  font-size: $reg-font-size-1;
+  font-family: Arial, Helvetica, sans-serif; 
+  &--1{
+  }
+}
+
+.txt-color{
+  &--blue{
+    &-1{
+      color: $color-blue-2;
+    }
+  }
+  &--green{
+    &-1{
+      color: $color-green-1;
+    }
+  }
+  &--orange{
+    &-1{
+      color: $color-orange-1;
+    }
   }
 }

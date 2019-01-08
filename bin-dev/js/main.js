@@ -6,20 +6,14 @@
 var context='large';
 var $window = $(window);
 var isTouchDevice = 'ontouchstart' in document.documentElement;
-var chapter0=2;
-var chapter1=3;
-var chapter2=8;
-var chapter3=11;
-var chapter4=25;
-var chapter5=32;
-var sub1=13;
-var sub2=19;
-var sub3=22;
-var sub4=26;
-var sub5=27;
-var sub6=28;
-var sub7=29;
-var sub8=30;
+var chapter0=1;
+var chapter1=2;
+var chapter2=4;
+var chapter3=8;
+var chapter4=14;
+// var chapter5=12;
+// var chapter6=13;
+// var chapter7=14;
 // run this right away to set context
 if ( $window.width() <= 1024) {
     context = 'medium';
@@ -27,6 +21,8 @@ if ( $window.width() <= 1024) {
     var chapter3=5;
     var chapter4=6;
     var chapter5=7;
+    var chapter6=8;
+    var chapter7=9;
 
     if ($window.width() <= 767) {
         context = 'small';
@@ -52,38 +48,13 @@ if ( $window.width() <= 1024) {
     }
 });
 
-var toggle_icon = false
+var toggle_icon = false;
 
-function slider_l_toggle(slide){
-    $('#slide-l-'+ slide).toggleClass('hoverish_pop-l');
-    // $('#slide-l-'+ slide).css('')    
+function slide_toggle(x){
+    $('#slide_pg'+ x).toggleClass('hoverish_div');    
 }
-
-function slide_toggle(slide){
-    $('#slide'+slide).toggleClass('slide_trig'); 
-    $('.footer').toggle();
-}
-
-function hov_in(x){
-    $("#hov-desc" + x).addClass('hov-trig');
-}
-
-function hov_out(y){
-    $("#hov-desc" + y).removeClass('hov-trig');    
-}
-
-function pop(x){
-    if(x===2){
-        $('#pop'+x).toggleClass('show1');
-       $('.footer').toggle();        
-    }else{
-        $('#pop'+x).toggleClass('show');
-    }
-}
-
 
 $(document).ready(function() {
-
     var slider = $('.book-slider').slick({
         infinite: false,
         responsive: [
@@ -164,75 +135,48 @@ $(document).ready(function() {
         $('body').css('height', window.innerHeight);
         $('.book-slider').slick('unslick');
 
-        $("#mobile-page-1").detach().appendTo('#p4 .container');
-        $("#mobile-page-2").detach().appendTo('#p4 .container');
-        $("#mobile-page-3").detach().appendTo('#p4 .container');
-        $("#mobile-page-4").detach().appendTo('#p4 .container');
+        // Move footnotes at bottom of page  
+        for(let i=1; i<12; i++){
+            $(".footnote__"+i).detach().appendTo('.footnote-container__t'+i);
+        }
 
-        $("#mobile-page-5").detach().appendTo('#p9 .container');
-        $("#mobile-page-6").detach().appendTo('#p9 .container');
+        // Replace superscripts on footnotes
+        for(let i=2; i<5; i++){
+            $(".sup__change-1--"+i).text(i);
+        }
+        for(let i=2; i<5; i++){
+            $(".sup__change-2--"+i).text(i);
+        }
+        $(".sup__change-3--1").text(5);
+        $(".sup__change-3--2").text(6);
+                
+        $("#mobile-page-1").detach().appendTo('.page--p3 .content-holder');
 
-        $("#mobile-page-7").detach().appendTo('#p12 .container');
-        $("#mobile-page-8").detach().appendTo('#p12 .container');
-        $("#mobile-page-9").detach().appendTo('#p12 .container');
-        $("#mobile-page-10").detach().appendTo('#p12 .container');
-        $("#mobile-page-11").detach().appendTo('#p12 .container');
-        $("#mobile-page-12").detach().appendTo('#p12 .container');
-        $("#mobile-page-13").detach().appendTo('#p12 .container');
-        $("#mobile-page-14").detach().appendTo('#p12 .container');        
-        $("#mobile-page-15").detach().appendTo('#p12 .container');
-        $("#mobile-page-16").detach().appendTo('#p12 .container');
-        $("#mobile-page-17").detach().appendTo('#p12 .container');
-        $("#mobile-page-18").detach().appendTo('#p12 .container');
-        $("#mobile-page-19").detach().appendTo('#p12 .container');
+        $("#mobile-page-2").detach().appendTo('.page--p5 .content-holder');
+        $("#mobile-page-3").detach().appendTo('.page--p5 .content-holder');
+        $("#mobile-page-4").detach().appendTo('.page--p5 .content-holder');
 
-        $("#mobile-page-20").detach().appendTo('#p26 .container');
-        $("#mobile-page-21").detach().appendTo('#p26 .container');
-        $("#mobile-page-22").detach().appendTo('#p26 .container');        
-        $("#mobile-page-23").detach().appendTo('#p26 .container');
-        $("#mobile-page-24").detach().appendTo('#p26 .container');
-        $("#mobile-page-25").detach().appendTo('#p26 .container');
+        $("#mobile-page-5").detach().appendTo('.page--p9 .content-holder');
+        $("#mobile-page-6").detach().appendTo('.page--p9 .content-holder');
+        $("#mobile-page-7").detach().appendTo('.page--p9 .content-holder');
+        $("#mobile-page-8").detach().appendTo('.page--p9 .content-holder');
+        $("#mobile-page-9").detach().appendTo('.page--p9 .content-holder');
 
-        $("#mobile-page-26").detach().appendTo('#p33 .container');
+        $("#mobile-page-10").detach().appendTo('.page--p15 .content-holder');
 
-        $("#p5").remove();
-        $("#p6").remove();
-        $("#p7").remove();
-        $("#p8").remove();
+        $(".page--p4").remove();
 
-        $("#p10").remove();
-        $("#p11").remove();        
+        $(".page--p6").remove();
+        $(".page--p7").remove(); 
+        $(".page--p8").remove();
 
-        $("#p13").remove();
-        $("#p14").remove();
-        $("#p15").remove();     
-        $("#p16").remove();
-        $("#p17").remove();
-        $("#p18").remove();
-        $("#p19").remove();
-        $("#p20").remove();
-        $("#p21").remove();
-        $("#p22").remove();
-        $("#p23").remove();
-        $("#p24").remove();
-        $("#p25").remove();
+        $(".page--p10").remove();
+        $(".page--p11").remove();
+        $(".page--p12").remove();
+        $(".page--p13").remove();
+        $(".page--p14").remove();   
 
-        $("#p27").remove();
-        $("#p28").remove();
-        $("#p29").remove();
-        $("#p30").remove();
-        $("#p31").remove();
-        $("#p32").remove();                                
-
-        $("#p34").remove();
-
-
-
-
-
-
-
-
+        $(".page--p16").remove();               
 
         $('.book-slider').slick({
             infinite: false,
@@ -254,31 +198,10 @@ $(document).ready(function() {
 
 
         if($('body').width() <768) {
-            var fix1 = $('.TOC-left').height() + 75 + $('.TOC-right').height();
 
-            $('.tab-container-fix2').css('height',fix1);
-
-            $( window ).load(function() {       
-                var fix2 = $('#wrap_p1').height() + 73;
-                var fix3 = $('#wrap_p2').height() + 120;
-                var fix4 = $('#wrap_p3').height() + 85;
-
-                $('#p4 .wrap-introchap').css('height',fix2);
-                $('#p9 .wrap-introchap').css('height',fix3);
-                $('#p12 .wrap-introchap').css('height',fix4);
-
-                for(var i = 1; i < 35; i++){
-                    $('#arrow' + i).css('margin-bottom', $('#content' + i).height() - 16)
-                }
-
-                for(var j = 1; j < 4; j++){
-                    $('.number' + j).css('margin-bottom', $('#num_cont' + j).height() - 22)
-                }
-
-                for(var k = 1; k < 4; k++){
-                    $('.div-anaytics-' + k).css('height', $('#auto-content' + k).height() + 55)
-                }
-            });
+            for(let i=1; i<12; i++){
+                $(".footnote__"+i).detach().appendTo('.footnote-container__'+i);
+            }
         }
 
     }
@@ -287,13 +210,14 @@ $(document).ready(function() {
 
     $('.scrollbar-inner').scrollbar();
 
-    $('h1, h2, h3, h4, h5, h6, li, p, .quote, .cover-title, .widow').widowFix();
+    $('h1, h2, h3, h4, h5, h6, li, p, .quote, .cover-title, .txt-19').widowFix();
     $('.rewidow').each(function(){
         $(this).html($(this).html().replace(/&nbsp;/gi,' '));
-    });    
+    });      
     var hash = window.location.hash.split('/');
     var hashVal = hash[2];
     $('.book-slider').slick('slickGoTo', hashVal);
+
 	    $('#preloader').fadeOut('fast');
         if(window.location.hash) {
             var hash = window.location.hash.split('/');
@@ -364,7 +288,7 @@ $(document).on('keydown', function(e) {
 
 
 var flag=false;
-var previousSlide;
+
 
 $('.book-slider').on('afterChange', function(event, slick, currentSlide, nextSlide) {
 
@@ -377,49 +301,48 @@ $('.book-slider').on('afterChange', function(event, slick, currentSlide, nextSli
     }else{
         window.location.hash = '/page/' + currentSlide;
     }
-
-    $('.nav-bar').addClass('flex-show');
-    // $('.nav-right').show();
+    $('.nav-bar').addClass('nav-flex');
     $('.footer').fadeIn();
 
 	//controls nav display
-    // switch(currentSlide) {
-    //     case 0:
-    //         $('.footer').hide();
-    //         $('.footer-phone').hide();
-    //         $('.nav-bar').hide();
-    //         break;
-    //     case lastSlide:
-            // $('.nav-bar').hide();
-            // $('.footer').hide();
+    switch(currentSlide) {
+        case 0:
+            $('.footer').hide();
             // $('.footer-phone').hide();
-    //         break;
-    //     default:
-
-    // }
+            $('.nav-bar').removeClass('nav-flex');
+            break;
+        case lastSlide:
+            // $('.nav-bar').hide();
+            $('.footer').hide();
+            // $('.footer-phone').hide();
+            break;
+        default:
+    }
 
 	//arrow display
 	$('.slick-arrow').show();
-    if (currentSlide === 0 ) { 
-        $('.slick-prev.slick-arrow').hide();
-        $('.nav-bar').removeClass('flex-show');
-    }  
-    if (currentSlide === lastSlide ) { 
-        $('.slick-next.slick-arrow').hide();
-        $('.nav-bar').removeClass('flex-show');
-    }  
+    
+    if (currentSlide === 0 ) {
+     $('.slick-prev.slick-arrow').hide();
+     $('.slick-next.slick-arrow').hide();
+     if($('body').width() < 1025){
+        $('.footer-phone').hide();   
+     }     
+    }else{
+     if($('body').width() < 1025){
+        $('.footer-phone').show();
+     }                
+    };      
+
+    if (currentSlide === lastSlide ) { $('.slick-next.slick-arrow').hide(); }  
      
     //display footer text & visibility
 
     var footerText = [
-    	[ [0] , ""],
-    	[ [1] , "Table of Contents"],
-    	[ [2] , "Welcome and Introduction"],
-    	[ [3,4,5,6,7] , "Chapter 1: Vision and Strategy"],
-    	[ [8,9,10] , "Chapter 2: Customer Success"],
-        [ [11,12,13,14,15,16,17,18,19,20,21,22,23,24] , "Chapter 3: Innovation Plans"],
-        [ [25,26,27,28,29,30,31] , "Chapter 4: Plotting Your Journey to the Cloud"],
-        [ [32] , "Chapter 5: Engaging with Oracle"],
+    	// [ [0,1,2] , ""],
+    	// [ [3] , "<p class='pgraph--7'><sup class='sup--2'>1</sup>Accenture, “Technology Vision 2017.”</p>"],
+     //    [ [4] , "<p class='pgraph--7 pgraph--7-1'><sup class='sup--2'>1</sup> Jeff Schwartz et al., “The future of work: The augmented workforce” (Deloitte University Press, 2017).”</p>"],
+     //    [ [,5,6,7,8,9,10,11,12,13,14,15] , ""],
     ];
 
 
@@ -429,58 +352,17 @@ $('.book-slider').on('afterChange', function(event, slick, currentSlide, nextSli
     $('#footNum').text(pageNum);
 
 
-    if(currentSlide !== previousSlide){
-        $( ".chap-intro-trig" ).removeClass( "chap-intro-trig" );
-
-        for(var i=0; i < 5; i++){
-            $( ".trig"+i ).removeClass( "trig"+i);   
-            $( ".trig_y"+i ).removeClass( "trig_y"+i );     
-        }
-
-        $('.footer-chap-title').removeClass('txt-blue-dk');
-        $( ".show" ).removeClass( "show" );
-        $( ".show1" ).removeClass( "show1" );
-        previousSlide = currentSlide;
-    }
-
 if(context=='large'){
         $.each(footerText, function( i, arr2 ){
             $.each( arr2[0], function( i, v ){
-                if(currentSlide == v ) {                    
-                    $('.footer-chap-title').text(arr2[1]);
+                if(currentSlide == v ) {
+                    $('.footer-chap-title').html(arr2[1]);
                 }
             });
-        });    
-
+        });
     }
 
-
-    if(currentSlide === lastSlide || currentSlide < 2){
-        $('.footer').hide();
-        $('.footer-phone').hide();           
-    }    
-
-    if(context==='medium' || context==='small'){
-        // $('.nav-right').show();
-        if(currentSlide === lastSlide){
-            // $('.nav-bar').show();
-            $('#next-chap').hide();   
-        }else{
-            // $('.nav-bar').show();
-            $('#next-chap').show();
-        }         
-        if(currentSlide === 0){
-            $('.nav-right').hide();
-            $('.footer-phone').hide();   
-            $('.nav-bar').removeClass('nav-color');
-        }else{
-            $('.footer-phone').show();
-            $('.nav-right').show();
-            $('.nav-bar').addClass('nav-color');
-        }         
-    }
-
-    });
+});
 
 //mobile page height fix for ios/chrome/ff madness
 $(window).on('resize orientationchange', function() {
@@ -502,7 +384,6 @@ $(window).on('resize orientationchange', function() {
             $(".footer-phone").removeClass('up');
         },500)
     }
-
 });
 
 //add the ScrollTo animation

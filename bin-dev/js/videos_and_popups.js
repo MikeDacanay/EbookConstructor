@@ -37,23 +37,10 @@ function launchLink(ob) {
     if (!open) alert('Could not open the image browser, please disable your popup blocker.');
 }
 
-function openYouTubeOverlay(yt_id) {
-
-    var yt_id=yt_id;
+function openYouTubeOverlay() {
     var cwidth = 639;
     var cheight = 360;
-    yt_class= yt_id[1]+yt_id[2]+yt_id[3];
-
-
-    if($(window).width() <= 767){
-        $('.'+yt_class).attr('width',300);
-        $('.'+yt_class).attr('height',180);
-        var cwidth = 300;
-        var cheight = 180;
-    }
-
-
-    $(yt_id).css({
+    $(".youtube-overlay-container").css({
         'display': 'block',
         'width': cwidth + 'px',
         'height': (cheight + 0) + 'px',
@@ -61,7 +48,7 @@ function openYouTubeOverlay(yt_id) {
     });
 
     if (navigator.userAgent.indexOf("iPad") >= 0) {
-        $(yt_id).css({
+        $("#youtube-overlay-container").css({
             'display': 'block',
             'width': cwidth + 'px',
             'height': '379px',
@@ -74,10 +61,10 @@ function openYouTubeOverlay(yt_id) {
         'width': cwidth + 'px',
         'height': cheight + 'px'
     });
-    // $(".youtube-overlay-content").html($(ob.data.id).html());
+    //$("#youtube-overlay-content").html($(ob.data.id).html());
     $(".youtube-overlay-content").css('overflow', 'hidden');
 
-    $(yt_id).bPopup({
+    $(".youtube-overlay-container").bPopup({
         follow: [true, true],
         position: ['auto', 'auto'],
         escClose: 'true'
@@ -86,16 +73,17 @@ function openYouTubeOverlay(yt_id) {
 
     $(".youtube-overlay-content").css('opacity', 1);
 }
+
 function openVideoOverlay(ob) {
     var videoID=ob;
 
   //  ob.data ? videoID = ob.data.video : videoID = $(ob.currentTarget).attr("vid");
     var cwidth = 639;
-    var cheight = 361;
+    var cheight = 340;
 
     if(window.innerWidth<500){
        cwidth=300;
-       cheight=180;
+       cheight=168;
 
     }
     $("#voverlay-container").css({

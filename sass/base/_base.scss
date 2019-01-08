@@ -21,13 +21,21 @@ html {
   @include bpx(1400,799){
     font-size: 94%;
   };
+  @include bp(1053){
+    font-size: 125%;
+    overflow: hidden;    
+  }
   @include bp(767){
-    font-size: 94%; //15px
+    font-size: 112%; //18px    
   };
 }
 
 body {
   @include artboard-top-center;
+  @include bp(1053){
+    height:100vh;
+    position: relative;
+  }
 }
 
 article,
