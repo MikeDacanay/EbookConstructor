@@ -1,0 +1,34 @@
+{
+  "name": "ebookconstructor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss bin-dev/css/style.min.css -w",
+    "devserver": "live-server",
+    "start:css": "npm-run-all --parallel devserver watch:sass",
+
+    "compile:sass": "node-sass sass/main.scss bin-dev/css/style.comp.css",
+    "concat:css": "concat -o bin-dev/css/style.concat.css bin-dev/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' bin-dev/css/style.comp.css -o bin-dev/css/style.prefix.css",
+    "compress:css": "node-sass bin-dev/css/style.prefix.css bin-dev/css/style.min.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+  },
+"repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelsmgomes/EbookConstructor.git"
+  },
+  "author": "Rafael Gomes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelsmgomes/EbookConstructor/issues"
+  },
+  "homepage": "https://github.com/rafaelsmgomes/EbookConstructor#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "concat": "^1.0.3",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1"
+  }
+}
