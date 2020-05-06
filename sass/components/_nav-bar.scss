@@ -1,178 +1,178 @@
 .nav-bar {
-    display: flex;
-    width: 100%;
-    height: 2.90rem;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    transition-delay: 5s;
-    transition: .25s all ease-in-out;
-    background-color: rgba(123,44,54,.1);
-    a {
-      text-decoration: none;
-        letter-spacing: -.04em;
-    }
-    &.nav-flex{
-      display:flex;
-    }
-
-}
-
-.company-logo{
-  opacity: 1;
-  background-image: url("../assets/graphics/icons/oracle-logo.svg");
-  background-repeat: no-repeat;
+  display: flex;
   height: 2.90rem;
-  width: 7.80rem;
-  float: left;
-  margin-left: 3.55rem;
-  background-size: cover;
-  display: inline-block;
-  transition-delay: background 0s;
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  transition-delay: 5s;
+  transition: .25s all ease-in-out;
 
-    a {
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: 0;
-      bottom: 0;
+  @include bp(1053){
+    width: 100%;
+    background-color: rgba($color: $color-white-1, $alpha: .75);
+  }
+
+  a {
+    font-family: $font-bold;
+    font-size: .8rem;
+
+    text-decoration: none;
+    letter-spacing: -.04em;
+    color: white;
+  }
+  &.nav-flex{
+    display:flex;
+    
+    @include bp(800){
+      height: 2.2rem;
+      padding-top: .2rem;
     }
+  }
+
+  &.backBlue{
+    background-color: rgba($color: $color-sea, $alpha: .9);  
+  }
+
 }
 
 .icon-wrap {
-  display: block;
-  opacity: 1;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  &__desc{
-    font-size: 0.95rem;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+display: none;
+opacity: 1;
+height: 100%;
+display: flex;
+align-items: center;
+cursor: pointer;
+margin-left: auto;
+margin-right: 1rem;
+&__desc{
+  font-size: 0.95rem;
+  font-weight: bold;
+  font-family: $font-reg;
+}
 
-  & > *{
-    display: inline-block;
-    position: relative;
-    /*  height: 100% !important;*/
-    background-repeat: no-repeat;
-    background-position: center center;
-    & > ul {
-      transform: translateY(2.3*.5rem);
-      visibility: hidden;
-      opacity:0 ;
-      top: 100%;
-      left: 50%;
-      z-index: 2;
-      padding-left: 0.50rem;
-      border-radius: 0;
-      padding: 0;
-      margin-top: 2.50rem;
-      margin-left: -2.30rem;
-      margin-bottom: .1.00rem;
-      -webkit-transition: all .25s ease-in-out;
-      -moz-transition:all .25s ease-in-out;
-      -o-transition:all .25s ease-in-out;
-      
-      & > li {
-        list-style: none;                
-        a,
-        span{
-          padding: 1.10rem 1.00rem .1.00rem 1.50rem;
-          display: block;
-          transition: all .25s ease-in-out;
-          cursor: pointer;
-        }
-      }
-    }
-    & > .social-dd {
-      margin-top: 0.15rem;
-    }
-  }
-  & > .icon-smedia > ul {
-    left: auto;
-    right: 0;
-    transform: translateX(0);
-  }
-  .hamburger_icon > ul {
-    left: 0%;
-    padding-top: 1.45rem;
-    padding-bottom: 1.45rem;
-    
-    &.social-dd {
-      padding-bottom: 1.25rem;
-      padding-top: 1.25rem;
-    }
-  }    
-  &.hoverish  ul {
-    transform: translateY(0.8*.5rem);
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition: all .25s ease-in-out;
-    -moz-transition:all .25s ease-in-out;
-    -o-transition:all .25s ease-in-out;
-  }
+&.hoverish  .menu-dd {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition:all .25s ease-in-out;
+  -o-transition:all .25s ease-in-out;
+}
+
 }        
 
-.icon-wrap > * > ul > li .icon-download a {
-    padding: 0.60rem 1.00rem .1.00rem 0px;
-}
-
-.icon-wrap > * > ul > li span, .icon-wrap > * > ul > li a {
-  transition: background-color .25s ease-in-out;
-  transition: background-color 0.25s ease-in-out;
-}
-
-.icon-wrap > * > ul > li:hover a, .icon-wrap > * > ul > li:hover span {
-  transition: .25s ease-in-out;
-  text-decoration: none;
-}
-.menu-dd li:hover  a .txt-blue-dk{
-  text-decoration: underline;
-}
-.hashover{
-    cursor: pointer;
-}
-.social-dd .hashover:hover .txt-blue-dk{
-    text-decoration: underline;
-}
-
 .hamburger_icon {
-  background-image: url("../assets/graphics/icons/ddownicon.svg");
-  width: 2.40rem;
-  height: 2.15rem;
-    background-position: top left;
+  background-image: url("../../bin-dev/assets/icons/SVG/icon-nav-blue.svg");
+  width: 2rem;
+  height: 1.2rem;
+  background-position: top left;
   cursor: pointer;
   margin-right: 0.28rem;
-}
-.hamburger_icon.lighter{
-    background-image: url("../assets/graphics/icons/hamburger-light.svg");
+
+  position: relative;
+  /*  height: 100% !important;*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include bp(1053) { 
+    margin-right: 1.5rem;
+  }
+  @include bp(425) { margin-right: .5rem;}
+
+  &.iconWhite{
+    background-image: url("../../bin-dev/assets/icons/SVG/icon-nav-white.svg");
+  }
+
 }
 
+.menu-dd{
+position: absolute;
+visibility: hidden;
+opacity:0 ;
+cursor: auto;
+width: 19.3rem;
+// height: 33.8rem;
+top: 1.7rem;
+right: 0;
+z-index: 2;
+padding-left: 0.50rem;
+border-radius: .6rem;
+box-shadow: 0 .1rem .2rem 0 rgba(0, 0, 0, .5);
+padding: 1.3rem;
+background-color: $color-sea;
+color: $color-white-1;
+max-height: 90vh;
 
-.hamburger_icon > ul {
-    width: 29.25rem;
+-webkit-transition: all .25s ease-in-out;
+-moz-transition:all .25s ease-in-out;
+-o-transition:all .25s ease-in-out;
+
+@include bp(1053) {
+  overflow: scroll;
+  max-height: 75vh;
 }
+@include bp(450) {
+  width: 78vw;
+}
+
+&__list{
+  list-style: none;
+}
+&__pdf{
+
+}
+&__item{
+  margin-bottom: 1rem;
+  color: $color-white-1;
+
+  &--chap{
+    font-family: $font-lt;
+    font-size: .7rem;
+    color: $color-white-1;
+    letter-spacing: 0;
+  }
+  &--main{
+    font-family: $font-bold;
+    font-size: .8rem;
+    letter-spacing: normal;
+    line-height: normal;
+    color: $color-white-1;
+    & > .underline { 
+      margin-right: .5rem;
+    }
+  }
+  &--pag{
+    font-family: $font-lt;
+    font-size: .7rem;
+    letter-spacing: 0;
+  }
+}
+}
+
+.hashover{
+  cursor: pointer;
+}
+
 
 .icon-download {
-    background-image: url('../assets/graphics/icons/download-arrow.png');
-    background-repeat: no-repeat;
-    background-size: 1.40rem 1.95rem;
-    padding-left: 2.50rem;
-/*    margin-bottom: 20px;*/
-    min-height: 1.95rem;
-    background-position-x: .2.00rem;
-    padding-top: .3.50rem;
+  background-image: url("../../bin-dev/assets/icons/SVG/download-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 1.2rem;
+  padding-left: 1.80rem;
+  min-height: 1.95rem;
+  background-position-x: .2.00rem;
+  padding-top: .3.50rem;
+
 }
 
 .icon-download > ul {
-  text-align: center;
+text-align: center;
 }
 
-.icon-download > ul .pdf-link {
-  font-size: 0.80rem;
-  padding: 0.75rem .2.50rem;
-  width: 10.00rem;
+.box__underline{
+  content: "";
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid $color-white-1;
+  margin-top: .5rem;
+  margin-bottom: .8rem;
 }

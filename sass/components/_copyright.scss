@@ -1,12 +1,46 @@
+#teconsent {
+  color: $color-blue-2;
+} 
 #teconsent a {
-    color: #fff;
+  color: $color-blue-2;
 }
 .copyright{
-	padding: 0;
+  padding: 0;
+  position: relative;
+  bottom: auto;
+  font-size: 0.60rem;
+  display: flex;
+  justify-content: center;
+margin-top: 0.50rem;
+}
+ 
+.copyright--1{
+  color: $color-blue-2;
+  padding: 0;
   position: relative;
   bottom: auto;
   font-size: 0.60rem;
   display: flex;
   justify-content: center;
   margin-top: 0.50rem;
+
+  & p {
+
+    font-size: 12px;
+    margin: 0;
+    color: #4e5052;
+    & a { 
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include bp(1053){
+    display: none;
+  }
+}
+.txt-blue-link{
+  color: $color-blue-2;
 }
