@@ -47,10 +47,11 @@
 
 .slick-prev{
   @extend %slick-shared;
-  width: 1.60rem;
-  height: 2.80rem;
-  background-image: url("../assets/graphics/icons/arrow-prev.svg");
-  left: 0.00rem;
+  width: 1.20rem;
+  height: 2.10rem;
+  background-size: contain;
+  background-image: url("../assets/icons/SVG/nav-arrow-left.svg");
+  left: 0.50rem;
   z-index: 2000;
 }
 
@@ -62,10 +63,11 @@
 
 .slick-next {
   @extend %slick-shared;
-  width: 1.60rem;
-  height: 2.80rem;
-  background-image: url("../assets/graphics/icons/arrow-next.svg");
-  right: 0.00rem;
+  width: 1.20rem;
+  height: 2.10rem;
+  background-size: contain;
+  background-image: url("../assets/icons/SVG/nav-arrow-right.svg");
+  right: 0.50rem;
   z-index: 2000;
 }
 

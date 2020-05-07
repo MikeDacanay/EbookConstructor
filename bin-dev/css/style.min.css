@@ -425,10 +425,11 @@ textarea {
   -moz-osx-font-smoothing: grayscale; }
 
 .slick-prev {
-  width: 1.60rem;
-  height: 2.80rem;
-  background-image: url("../assets/graphics/icons/arrow-prev.svg");
-  left: 0.00rem;
+  width: 1.20rem;
+  height: 2.10rem;
+  background-size: contain;
+  background-image: url("../assets/icons/SVG/nav-arrow-left.svg");
+  left: 0.50rem;
   z-index: 2000; }
 
 [dir='rtl'] .slick-prev {
@@ -436,10 +437,11 @@ textarea {
   left: auto; }
 
 .slick-next {
-  width: 1.60rem;
-  height: 2.80rem;
-  background-image: url("../assets/graphics/icons/arrow-next.svg");
-  right: 0.00rem;
+  width: 1.20rem;
+  height: 2.10rem;
+  background-size: contain;
+  background-image: url("../assets/icons/SVG/nav-arrow-right.svg");
+  right: 0.50rem;
   z-index: 2000; }
 
 [dir='rtl'] .slick-next {
@@ -879,7 +881,7 @@ ul.no-dots-ul {
     width: 100%; }
   .video-thumbnail .video-play-bttn {
     content: '';
-    background: url("../assets/graphics/icons/video-play-btn.png") no-repeat center center;
+    background: url("../assets/icons/video-play-btn.png") no-repeat center center;
     background-size: contain;
     height: 100%;
     cursor: pointer;
