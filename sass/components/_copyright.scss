@@ -5,16 +5,6 @@
   color: $color-blue-2;
 }
 .copyright{
-  padding: 0;
-  position: relative;
-  bottom: auto;
-  font-size: 0.60rem;
-  display: flex;
-  justify-content: center;
-margin-top: 0.50rem;
-}
- 
-.copyright--1{
   color: $color-blue-2;
   padding: 0;
   position: relative;
@@ -37,10 +27,13 @@ margin-top: 0.50rem;
     }
   }
 
-  @include bp(1053){
+  @include bp(1053){ 
     display: none;
   }
+
+  &-link{
+    color: $color-blue-2;
+  }
 }
-.txt-blue-link{
-  color: $color-blue-2;
-}
+ 
+

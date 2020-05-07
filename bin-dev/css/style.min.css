@@ -545,6 +545,33 @@ input {
     .btn__arrow:hover {
       background-image: url("../../bin-dev/assets/icons/SVG/arrow-white.svg"); }
 
+#teconsent {
+  color: #00758f; }
+
+#teconsent a {
+  color: #00758f; }
+
+.copyright {
+  color: #00758f;
+  padding: 0;
+  position: relative;
+  bottom: auto;
+  font-size: 0.60rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.50rem; }
+  .copyright p {
+    font-size: 12px;
+    margin: 0;
+    color: #4e5052; }
+    .copyright p a:hover {
+      text-decoration: underline; }
+  @media only screen and (max-width: 1053px) {
+    .copyright {
+      display: none; } }
+  .copyright-link {
+    color: #00758f; }
+
 .footer-phone {
   display: none;
   background-color: rgba(252, 251, 250, 0.76);
