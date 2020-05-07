@@ -43,7 +43,7 @@ input {
   &[type="radio"]{
 	  box-sizing: border-box;
   	padding: 0;
-  }
+  } 
   &[type="number"]::-webkit-inner-spin-button,
   &[type="number"]::-webkit-outer-spin-button{
   	height: auto;
@@ -55,7 +55,7 @@ input {
   align-items: center;
   justify-content: space-between;
 
-  font-family: $font-sbd;
+  font-family: $font-reg;
   font-size: 1rem;
   letter-spacing: -0.51px;
   color: $color-sea;

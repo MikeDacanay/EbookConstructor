@@ -6,6 +6,7 @@
 	transform: translateX(-50%);
 	-webkit-transform: translateX(-50%);
 	overflow: hidden;
+	border: 1px solid lightgrey;
 	@include bp(1053){
     position: fixed;
     bottom: 0px;

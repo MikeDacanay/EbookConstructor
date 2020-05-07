@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>mobile-nav-top</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0 31.9998 0 31.9998 31.9999 0 31.9999"></polygon>
+    </defs>
+    <g id="Tablet-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-334.000000, -1128.000000)">
+            <g id="mobile-nav-top" transform="translate(334.000000, 1128.000000)">
+                <g id="Group-3">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-2"></g>
+                    <path d="M24.3008,17.8809 L22.2438,19.9379 L15.9998,13.6939 L9.7558,19.9379 L7.6988,17.8809 L15.9998,9.5789 L24.3008,17.8809 Z M29.0908,15.9999 C29.0908,8.7829 23.2188,2.9089 15.9998,2.9089 C8.7808,2.9089 2.9088,8.7829 2.9088,15.9999 C2.9088,23.2179 8.7808,29.0909 15.9998,29.0909 C23.2188,29.0909 29.0908,23.2179 29.0908,15.9999 L29.0908,15.9999 Z M31.9998,15.9999 C31.9998,24.8219 24.8218,31.9999 15.9998,31.9999 C7.1778,31.9999 -0.0002,24.8219 -0.0002,15.9999 C-0.0002,7.1779 7.1778,-0.0001 15.9998,-0.0001 C24.8218,-0.0001 31.9998,7.1779 31.9998,15.9999 L31.9998,15.9999 Z" id="Fill-1" fill="#255457" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
