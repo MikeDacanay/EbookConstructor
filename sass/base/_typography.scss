@@ -1,19 +1,25 @@
 @font-face {
-    font-family: "Univers-Bold";
-    src: url("../fonts/UniversNextPro-Bold.ttf");
-    font-weight: normal;
+  font-family: "OracleSans-Bold";
+  src: url("../fonts/OracleSans_Bd.ttf");
+  font-weight: normal;
 }
 @font-face {
-    /*55 Roman*/
-    font-family: "Univers";
-    src: url("../fonts/UniversLTStd.otf");
-    font-weight: normal;
+  /*55 Roman*/
+  font-family: "OracleSans";
+  src: url("../fonts/OracleSans_Rg.ttf");
+  font-weight: normal;
 }
 @font-face {
-    /*45 Light*/
-    font-family: "Univers-lt";
-    src: url("../fonts/UniversLTStd-Light.otf");
-    font-weight: normal;
+  /*45 Light*/
+  font-family: "OracleSans-lt";
+  src: url("../fonts/OracleSans_Lt.ttf");
+  font-weight: normal;
+}
+@font-face {
+  /*45 Light*/
+  font-family: "OracleSans-SBd";
+  src: url("../fonts/OracleSans_SBd.ttf");
+  font-weight: normal;
 }
 
 
@@ -25,7 +31,7 @@ html {
 body {
   /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.5em;
-  font-family: $font-arial;
+  font-family: $font-reg;
   color: #4e5052;
 }
 
@@ -108,7 +114,7 @@ textarea {
   font-weight: 400;
   line-height: normal;
   letter-spacing: .01em;
-  color: $color-white-1;
+  color: red;
   
   &--main{
     font-family: $font-bold;
@@ -124,7 +130,7 @@ textarea {
 
 .header{
   color: $color-blue-1;
-  font-family: $font-arial;
+  font-family: $font-reg;
   font-weight: 700;
   font-size: $big-font-size-1;
 

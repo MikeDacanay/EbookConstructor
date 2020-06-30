@@ -8,12 +8,15 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-.img-right img, .img-responsive img{
-    width: 100%;
-}
+.oracle-tag{
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  bottom: 0.4rem;
+  right: 4rem;
 
-.imgContainer{
-	&--1{
-		
-	}
+  @include bp(1053){
+    bottom: 0;
+    display: none !important;
+  }
 }

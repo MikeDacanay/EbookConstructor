@@ -8,12 +8,26 @@ $reg-font-size-1:	0.80rem; // 16px;
 $med-font-size-1:	1.20rem; // 24px;
 $big-font-size-1:	1.80rem; // 36px;
 // FONT-FAMILY
-$font-bold: Univers-Bold, Arial, Helvetica, sans-serif;
-$font-reg: Univers, Arial, Helvetica, sans-serif;
-$font-lt: Univers-lt, Arial, Helvetica, sans-serif;
-$font-arial: Arial, Helvetica, sans-serif;
+$font-bold: OracleSans-Bold, Arial, Helvetica, sans-serif;
+$font-reg: OracleSans, Arial, Helvetica, sans-serif;
+$font-lt: OracleSans-lt, Arial, Helvetica, sans-serif;
+$font-sbd: OracleSans-SBd, Arial, Helvetica, sans-serif;
+$font-title: Georgia, Arial, Helvetica, sans-serif;
 // COLORS
-$color-white-1: #fff;
+$color-white-1: #fcfbfa;
+$color-black: #312d2a;
+$color-black-2: #302c29;
+$color-brownish-grey: #67605b;
+
+$color-sand: #f0cc71; // sand
+$color-sea: #368080; // sea
+$color-dark-blue: #255457;
+$color-darker-blue: #2a5f62;
+$color-cloudy-blue: #a4d9d9;
+$color-mustard: #facd62;
+$color-pine: #2b6242;
+$color-tan: #e5dbbe;
+$color-grey: #979797;
 
 $color-blue-1: #4e5052;
 $color-blue-2: #00758f;

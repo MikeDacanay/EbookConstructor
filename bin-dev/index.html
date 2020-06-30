@@ -41,30 +41,69 @@
 <!-- <li><a onclick=" $('.book-slider').slick('slickGoTo', 1);"><div class="txt-blue-link txt-18 chap-desc phone-txt-16">Table of Contents</div></a> </li> -->
 
 
-	<div class="nav-bar">
-        <div class="company-logo">
-            <a data-slide="1" href="#"></a>
-        </div>
-        <nav class="icon-wrap">
-            <div class="hamburger_icon">
-                <ul class="menu-dd">
-                    <li class='cheat-12'><a onclick=" $('.book-slider').slick('slickGoTo', chapter1);"><div class="txt-blue-link toc-link chap-desc">Chapter 1: TEST1</div></a></li>
-                    <li><a class='toc-link' onclick=" $('.book-slider').slick('slickGoTo', chapter2); "><div class="txt-blue-link toc-link chap-desc">Chapter 2: TEST2</div></a></li>
-                    <li><a class='toc-link' onclick=" $('.book-slider').slick('slickGoTo', chapter3); "><div class="txt-blue-link toc-link chap-desc">Chapter 3: TEST3</div></a></li>
-                    <li><a class='toc-link' onclick=" $('.book-slider').slick('slickGoTo', chapter4);"><div class="txt-blue-link toc-link chap-desc">Chapter 4: TEST4</div></a></li>
-                    <li><a class='toc-link' onclick=" $('.book-slider').slick('slickGoTo', chapter5);"><div class="txt-blue-link toc-link chap-desc">Chapter 5: TEST5</div></a></li>
-
+<div class="nav-bar">
+    <nav class="icon-wrap">
+        <div class="hamburger_icon">
+            <div class="menu-dd">
+                <ul class="menu-dd__list">
+                    <li class="menu-dd__item rewidow"><a onclick=" $('.book-slider').slick('slickGoTo', overview);">
+                        <p class="menu-dd__item--chap">Overview</p>
+                        <p class="menu-dd__item--main">
+                            <span class="hov-underline">The Clear Imperative to </br>Modernize to ERP 2.0 </span>
+                            <span class="menu-dd__item--pag menu-dd__item--pag--1"> page 3</span>
+                        </p>
+                    </a></li>
+                    <li class="menu-dd__item rewidow"><a onclick=" $('.book-slider').slick('slickGoTo', chapter1);">
+                        <p class="menu-dd__item--chap">01</p>
+                        <p class="menu-dd__item--main">
+                            <span class="hov-underline">Now Is the Right Time to </br>Modernize Your ERP </span>
+                            <span class="menu-dd__item--pag menu-dd__item--pag--2"> page 5</span>
+                        </p>
+                    </a></li>
+                    <li class="menu-dd__item rewidow"><a onclick=" $('.book-slider').slick('slickGoTo', chapter2);">
+                        <p class="menu-dd__item--chap">02</p>
+                        <p class="menu-dd__item--main">
+                            <span class="hov-underline">Characteristics of Today’s </br>Modern ERP  </span>
+                            <span class="menu-dd__item--pag menu-dd__item--pag--3">page 7</span>
+                        </p>
+                    </a></li>
+                    <li class="menu-dd__item rewidow"><a onclick=" $('.book-slider').slick('slickGoTo', chapter3);">
+                        <p class="menu-dd__item--chap">03</p>
+                        <p class="menu-dd__item--main">
+                            <span class="hov-underline">How Companies Deploy </br>Modern ERP Systems </span>
+                            <span class="menu-dd__item--pag menu-dd__item--pag--4">page 9</span>
+                        </p>
+                    </a></li>
+                    <li class="menu-dd__item rewidow"><a onclick=" $('.book-slider').slick('slickGoTo', chapter4);">
+                        <p class="menu-dd__item--chap">04</p>
+                        <p class="menu-dd__item--main">
+                            <span class="hov-underline">Assessing Cloud ERP Results </br>After Deployment </span>
+                            <span class="menu-dd__item--pag menu-dd__item--pag--5">page 12</span>
+                        </p>
+                    </a></li>
+                    <li class="menu-dd__item rewidow"><a onclick=" $('.book-slider').slick('slickGoTo', chapter5);">
+                        <p class="menu-dd__item--chap">05</p>
+                        <p class="menu-dd__item--main">
+                            <span class="hov-underline">Why Oracle Is Your Best Choice </br>for Modern ERP Cloud </span>
+                            <span class="menu-dd__item--pag menu-dd__item--pag--6">page 13</span>
+                        </p>
+                    </a></li>
+                    <li class="menu-dd__item rewidow"><a onclick=" $('.book-slider').slick('slickGoTo', summary);">
+                        <p class="menu-dd__item--chap">Summary</p>
+                        <p class="menu-dd__item--main">
+                                <span class="hov-underline">Your Journey to Oracle Cloud </br>Starts Today </span>
+                                <span class="menu-dd__item--pag menu-dd__item--pag--7">page 14</span>
+                        </p>
+                    </a></li>
                 </ul>
-                <ul class="menu-dd social-dd">
-                    <li class='rewidow'>
-                    <div class="icon-download hashover txt-18 u rewidow" ><a class="txt-blue-link u" href="pdf/analytics-plan.pdf" target="_blank">Download PDF</a> </div>
-                    </li>
-
-                </ul>
+                <div class="box__underline"></div>
+                <div class="menu-dd__pdf social-dd">
+                    <div class="icon-download hov-underline hashover txt-18 u rewidow" ><a class="u" href="/" target="_blank">Download PDF</a> </div>
+                </div>
             </div>
-            <div class="icon-wrap__desc">Menu</div>
-        </nav>
-	</div>
+        </div>
+    </nav>
+</div>
 
 <!--SLIDER PAGES-->
 
@@ -91,14 +130,48 @@
 <!-- 2 -->      
     <section class="page page--2">
         <div class="container">
-            <div class="content-holder ">
-                <div class="container-left-2-col">    
-
-                </div>
-                <div class="container-right-2-col" >
-
-                </div>
-            </div>
+			<div class="content-holder ">
+				<div class="container-left-2-col container-left-2-col--toc">
+					<h2 class="header header__toc mt--1_50">Table of Contents</h2>
+					<div class="toc__container"><a onclick=" $('.book-slider').slick('slickGoTo', overview);">
+						<p class="toc__chapter">Overview</p>
+						<p class="toc__title">The Clear Imperative to Modernize to ERP 2.0 </p>
+						<p class="toc__description">Research shows that legacy ERP 1.0 systems were not designed for usability and insight. More than three quarters of business leaders say their current ERP system doesn’t... <span class="toc__page toc__page--0">page 03</span></p>
+					</a></div>
+					<div class="toc__container"><a onclick=" $('.book-slider').slick('slickGoTo', chapter1);">
+						<p class="toc__chapter">01</p>
+						<p class="toc__title">Now Is the Right Time to Modernize Your ERP </p>
+						<p class="toc__description">There is no argument that ERP 1.0 systems deliver significant horsepower to run your organization, set customer experiences, and directly impact how you fare… <span class="toc__page toc__page--1">page 05</span></p>
+					</a></div>
+					<div class="toc__container"><a onclick=" $('.book-slider').slick('slickGoTo', chapter2);">
+						<p class="toc__chapter">02</p>
+						<p class="toc__title">Characteristics of Today’s Modern ERP </p>
+						<p class="toc__description">No matter which inflection point represents your organization, there are characteristics you must consider when you undertake ERP modernization. <span class="toc__page toc__page--2">page 07</span></p>
+					</a></div>
+				</div>
+				<div class="container-right-2-col container-right-2-col--toc" >
+					<div class="toc__container mt--0_50"><a onclick=" $('.book-slider').slick('slickGoTo', chapter3);">
+						<p class="toc__chapter">03</p>
+						<p class="toc__title">How Companies Deploy Modern ERP Systems</p>
+						<p class="toc__description">As you plan your modern ERP strategy, you should pull together a deployment team that includes potential partners as well as vendors. <span class="toc__page toc__page--3">page 09</span></p>
+					</a></div>
+					<div class="toc__container"><a onclick=" $('.book-slider').slick('slickGoTo', chapter4);">
+						<p class="toc__chapter">04</p>
+						<p class="toc__title">Assessing Cloud ERP Results After Deployment </p>
+						<p class="toc__description">When you are finished crafting a strategic and comprehensive ERP modernization strategy, with carefully documented KPIs, you have the baseline for assessing your results. <span class="toc__page toc__page--4">page 12</span></p>
+					</a></div>
+					<div class="toc__container mt--2_25"><a onclick=" $('.book-slider').slick('slickGoTo', chapter5);">
+						<p class="toc__chapter">05</p>
+						<p class="toc__title">Why Oracle Is Your Best Choice for Modern ERP Cloud</p>
+						<p class="toc__description">Oracle delivers a single ERP cloud that is enterprise-grade and ready to grow your business today. <span class="toc__page toc__page--5">page 13</span></p>
+					</a></div>
+					<div class="toc__container"><a onclick=" $('.book-slider').slick('slickGoTo', summary);">
+						<p class="toc__chapter">Summary</p>
+						<p class="toc__title">Your Journey to Oracle Cloud Starts Today </p>
+						<p class="toc__description">Oracle’s global sales team and partners are ready to get you started on your journey to ERP 2.0—the modern ERP cloud that is rapidly becoming the foundation for business... <span class="toc__page toc__page--6">page 14</span></p>
+					</a></div>
+				</div>
+			</div>
         </div>
     </section>
 <!-- 3 -->
@@ -163,27 +236,40 @@
     </section>                                                                                             
 </div>
 
-
-
-
-    <div class="footer desktop_only">
-        <div class ="footer-chap-title"></div>
-        <span id ="footNum"></span>
-        <div class ="footer-book-title"></div>
-    </div>
-
-
-
+<div class="footer desktop_only">
+    <div class ="footer-chap-title"></div>
+    <span id ="footNum"></span>
+    <!-- <div class ="footer-book-title"></div> -->
 </div>
-<footer class="footer-phone tablet-only"  >
-    <div class="mobile-footer-section">
-        <div class="slick-prev-mobile" onclick="$('.slick-slider').slick('slickPrev');$('.footer-phone').removeClass('up');"><span class="phone-invis">Previous Chapter</span></div>
-    </div>
-    <a href="#" class="to-top tab-backToTop mobile-footer-section"><span class="arrow-up "><span class="phone-invis">Back to Top</span></span></a>
-    <div class="mobile-footer-section" id='next-chap'>
-        <div class="slick-next-mobile" onclick="$('.slick-slider').slick('slickNext');$('.footer-phone').removeClass('up');"><span class="phone-invis">Next Chapter</span></div>
-    </div>
+
+<!-- Next => /div closing Main Container -->
+</div> 
+<!-- Before => /div closing Main Container -->
+
+<div class="copyright " id="consent">
+	<p>
+        <a class='copyright-link' href='https://www.oracle.com/legal/copyright.html' target="_blank">© 2020 Oracle</a>
+            | 
+        <a class='copyright-link' href='https://www.oracle.com/legal/terms.html' target="_blank">Terms of Use</a>
+            and 
+        <a class='copyright-link' href='https://www.oracle.com/legal/privacy/index.html' target="_blank">Privacy</a>
+            | 
+        <a class="inline copyright-link" style="color: #00758f;" id="teconsent"></a>
+            | 
+            <a class='copyright-link' href='https://www.oracle.com/legal/privacy/privacy-choices.html' target="_blank">Do Not Sell my Info</a>
+            | 
+        <a class='copyright-link' href='https://www.oracle.com/legal/privacy/marketing-cloud-data-cloud-privacy-policy.html#12' target="_blank">Ad Choices</a>
+	</p>
+</div>
+
+
+<footer class="footer-phone">
+	<div class="mobile-footer-section slick-prev-mobile" onclick="$('.slick-slider').slick('slickPrev');$('.footer-phone').removeClass('up');$('.footer__badge').removeClass('up');"></div>
+	<a href="#" class="to-top tab-backToTop mobile-footer-section"><span class="arrow-up "></span></a>
+	<div id='next-chap' class="mobile-footer-section slick-next-mobile" onclick="$('.slick-slider').slick('slickNext');$('.footer-phone').removeClass('up');;$('.footer__badge').removeClass('up');"></div>
 </footer>
+<img src="./assets/logos/badge-oracle.svg" alt="badge-oracle" class="footer__badge">
+
 <div class="popupContainer" id="voverlay-container" style="display:none">
     <span class="button b-close" id="vid-close"></span>
     <div id="voverlay-content"></div>
